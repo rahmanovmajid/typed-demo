@@ -1,0 +1,45 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typed.JS</title>
+
+    <style>
+      .flex-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <h1>I am a <span id="element"></span></h1>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script>
+      var typed = new Typed('#element', {
+        strings: ['developer', 'student', 'researcher', 'babnik'],
+        typeSpeed: 40,
+        backSpeed: 40,
+        // startDelay: 700,
+        backDelay: 700, // yazi yazilib bitenden sonra nece ms gozdesin silmek ucun
+
+        shuffle: false, //stringleri shuffle eleyir
+        smartBackspace: true, //bilirsen
+
+        loop: true, //loopda saxliyir
+        loopCount: Infinity,
+        fadeOut: false, //bosh sohbetdi
+        showCursor: true, //kursoru gorset
+        cursorChar: '|', // kursor xususi ishare
+        autoInsertCss: true, //kursor yanib sonur
+      });
+    </script>
+  </body>
+</html>
